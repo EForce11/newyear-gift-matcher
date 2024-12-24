@@ -1,4 +1,4 @@
-# Name Matching Program
+# Name Matcher for New-Year Gifting Draws
 
 This program reads names from a file and randomly pairs them. It is particularly useful for activities like gift exchanges.
 
