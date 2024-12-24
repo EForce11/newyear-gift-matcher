@@ -44,14 +44,14 @@ This program reads names from a file and randomly pairs them. It is particularly
 
      Example Output:
      ```
-      Matches:
-      Anna -> Emily
-      Emily -> John
-      John -> Sarah
-      Sarah -> Emir
-      Emir -> Michael
-      Michael -> David
-      David -> Anna
+     Matches:
+     Anna -> Emily
+     Emily -> John
+     John -> Sarah
+     Sarah -> Emir
+     Emir -> Michael
+     Michael -> David
+     David -> Anna
      ```
 
 ## Possible Error Messages
