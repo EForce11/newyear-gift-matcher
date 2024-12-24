@@ -35,9 +35,8 @@ This program reads names from a file and randomly pairs them. It is particularly
 
    - In your terminal or command line, run the following command:
      ```
-     python <file_name>.py
+     python matcher.py
      ```
-   - Replace `<file_name>` with the name of your Python file (e.g., `name_matching.py`).
 
 3. **View Results:**
 
