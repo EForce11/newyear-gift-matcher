@@ -1,32 +1,32 @@
 import random
 
-def oku_isimler(dosya_adi):
+def read_names_from_file():
     try:
-        with open(dosya_adi, 'r', encoding='utf-8') as dosya:
-            isimler = [satir.strip() for satir in dosya.readlines() if satir.strip()]
-        return isimler
+        with open("names.txt", "r") as file:
+            names = [line.strip() for line in file if line.strip()]
+        return names
     except FileNotFoundError:
-        print(f"'{dosya_adi}' dosyası bulunamadı. Lütfen dosyanın mevcut olduğundan emin olun.")
+        print("Error: 'names.txt' file not found. Please ensure it is in the same directory as the program.")
         return []
 
-def eslestir_isimler(isimler):
-    random.shuffle(isimler)
-    eslesmeler = list(zip(isimler, isimler[1:] + [isimler[0]]))
-    return eslesmeler
+def match_names(names):
+    random.shuffle(names)
+    matches = list(zip(names, names[1:] + [names[0]]))
+    return matches
 
 def main():
-    dosya_adi = "isimler.txt"
-    isimler = oku_isimler(dosya_adi)
+    print("Reading names from 'names.txt'...")
+    names = read_names_from_file()
 
-    if len(isimler) < 4:
-        print("Lütfen 'isimler.txt' dosyasına en az 4 isim ekleyin.")
+    if len(names) < 4:
+        print("Error: Please add at least 4 names to 'names.txt'.")
         return
 
-    eslesmeler = eslestir_isimler(isimler)
+    matches = match_names(names)
 
-    print("\nEşleştirmeler:")
-    for e in eslesmeler:
-        print(f"{e[0]} -> {e[1]}")
+    print("\nMatches:")
+    for match in matches:
+        print(f"{match[0]} -> {match[1]}")
 
 if __name__ == "__main__":
     main()
